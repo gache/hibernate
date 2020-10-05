@@ -1,4 +1,6 @@
 package com.formation.hibernate.repositories;
 
-public interface ArtisteRepository {
+import com.formation.hibernate.models.Artiste;
+
+public interface ArtisteRepository extends CrudRepository <Artiste, Long> {
 }

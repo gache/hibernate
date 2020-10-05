@@ -1,4 +1,6 @@
 package com.formation.hibernate.repositories;
 
-public interface ImageRepository {
+import com.formation.hibernate.models.Image;
+
+public interface ImageRepository extends CrudRepository<Image, Long> {
 }

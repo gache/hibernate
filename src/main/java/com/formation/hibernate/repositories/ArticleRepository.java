@@ -1,4 +1,6 @@
 package com.formation.hibernate.repositories;
 
-public interface ArticleRepository {
+import com.formation.hibernate.models.Article;
+
+public interface ArticleRepository extends CrudRepository <Article, Long> {
 }
