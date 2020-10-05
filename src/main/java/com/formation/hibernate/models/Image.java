@@ -26,4 +26,9 @@ public class Image {
     @Column(nullable = false)
     private String lien;
 
+    // liens avec du java avec les association
+    @ManyToOne
+    @JoinColumn(nullable = false) // il faut minimun une image
+    private Article article;
+
 }

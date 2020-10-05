@@ -3,8 +3,11 @@ package com.formation.hibernate.models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -22,5 +25,14 @@ public class Article {
     private String descrition;
 
     private Double prix;
+
+    // liens en java les association et la connexion avec hibernate
+
+    @OneToMany(mappedBy = "article") // je fais une prioritaire mappedBy est le soumis
+    @ToString.Exclude private List<Image> images = new ArrayList<>();
+
+    @ManyToMany(mappedBy = "articles")
+    @ToString.Exclude private List<Artiste> artistes = new ArrayList<>();
+
 
 }
